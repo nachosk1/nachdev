@@ -1,0 +1,88 @@
+---
+import Container from "./Container.astro";
+
+const SendMessage = () => {
+  
+}
+---
+
+<section class="-mt-4 pt-20"  id="contact">
+  <Container>
+    <h2 class="text-primary text-2xl md:text-3xl font-bold text-center">
+      Contactame
+    </h2>
+    <p class="text-lg md:text-xl text-center mb-12">
+      Si buscas fortalecer tu equipo, ¡estaré encantado de colaborar contigo!
+      Escríbeme.{" "}
+    </p>
+    <form class="my-8 flex flex-col gap-y-4 mx-auto">
+      <div class="flex flex-col md:flex-row gap-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Tu nombre"
+          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Tu correo electrónico"
+          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md"
+        />
+      </div>
+      <textarea
+        name="message"
+        placeholder="Tu mensaje"
+        class="resize-none p-4 outline-none border-b border-b-slate-600 h-[100px] md:h-[250px] bg-transparent w-full placeholder:text-[#757879] border border-gray-200 rounded-t-md focus:outline-none"
+      ></textarea>
+
+      <button class={`button transition duration-500 bg-black`}>
+        Enviar Mensaje</button
+      >
+    </form>
+  </Container>
+</section>
+
+<style>
+  .button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #000000;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 600;
+    color: #000000;
+  }
+
+  .transform-button {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .button::before {
+    content: "";
+    width: 0;
+    height: 2000%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #1D3557;
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+
+  .button:hover::before {
+    width: 105%;
+  }
+
+  .button:hover {
+    color: #fff;
+    border: 2px solid #1D3557;
+  }
+</style>

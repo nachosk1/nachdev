@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -17,13 +20,16 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Navigation />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	html {
 		font-family: system-ui, sans-serif;
-		background: #fff;
+		background: #F1FAEE;
 		background-size: 224px;
+		scroll-behavior: smooth;
 	}
 </style>

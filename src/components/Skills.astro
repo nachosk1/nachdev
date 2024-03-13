@@ -1,0 +1,47 @@
+---
+import Container from "./Container.astro";
+import Html from "./icons/Html.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Css from "./icons/Css.astro";
+import Php from "./icons/Php.astro";
+import Mongodb from "./icons/Mongodb.astro";
+import Mysql from "./icons/Mysql.astro";
+import Vscode from "./icons/Vscode.astro";
+import Figma from "./icons/Figma.astro";
+---
+
+<section class="-mt-4 pt-20 pb-16" id="skills">
+  <Container>
+    <h2 class="text-primary text-2xl md:text-3xl font-bold text-center">
+      Mis habilidades
+    </h2>
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-8 mt-8"
+    >
+      <div class="group">
+        <Html />
+      </div>
+      <div class="group">
+        <JavaScript />
+      </div>
+      <div class="group">
+        <Css />
+      </div>
+      <div class="group">
+        <Php />
+      </div>
+      <div class="group">
+        <Mongodb />
+      </div>
+      <div class="group">
+        <Mysql />
+      </div>
+      <div class="group">
+        <Figma />
+      </div>
+      <div class="group">
+        <Vscode />
+      </div>
+    </div>
+  </Container>
+</section>
