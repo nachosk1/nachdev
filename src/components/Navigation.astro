@@ -1,15 +1,14 @@
 ---
 import { optionNav } from "../../constants/index.js";
 import Switch from "../components/Switch.astro"
+import Logo from "./Logo.astro";
 ---
 
 <header class="fixed w-full bg-background shadow-sm z-30">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="md:flex md:items-center md:gap-12">
-        <a class="block text-teal-600" href="#">
-          <img src="/logo.jpg" class="w-14 h-w-14" alt="logo"/>
-        </a>
+        <Logo />
       </div>
 
       <div class="hidden md:block">
@@ -19,7 +18,7 @@ import Switch from "../components/Switch.astro"
               optionNav.map((option) => (
                 <li>
                   <a
-                    class="text-gray-500 transition duration-300 ease-in-out font-medium hover:text-gray-800 text-base"
+                    class="text-gray-500 transition duration-300 ease-in-out font-medium hover:text-gray-900 text-base"
                     href={option.path}
                   >
                     {option.name}

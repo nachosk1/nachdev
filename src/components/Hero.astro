@@ -1,11 +1,11 @@
 <section id="home" class="pt-20">
   <div class="mx-auto max-w-screen-xl px-4 flex h-[70vh] items-center">
     <div class="mx-auto max-w-xl text-center">
-      <h1 class="text-3xl font-extrabold sm:text-5xl">
-        Hola Mundo!!
+      <h1 class="leading-custom text-3xl font-extrabold sm:text-5xl">
         <strong class="font-extrabold text-primary sm:block">
           Programador Full Stack
         </strong>
+        <span class="block text-gray-800">Pedro Martinez</span>
       </h1>
 
       <p class="mt-4 sm:text-xl/relaxed">
@@ -15,7 +15,8 @@
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="https://github.com/nachosk1" target="_blank">
+        <a href="https://github.com/nachosk1" target="_blank" title="github">
+          <title>GitHub</title>
           <svg
             width="34"
             height="34"
@@ -37,12 +38,15 @@
         <a
           href="https://www.linkedin.com/in/pedro-martinez-bba759293/"
           target="_blank"
+          title="linkedin"
         >
+          <title>LinkedIn</title>
           <svg
             width="34"
             height="34"
             fill="currentColor"
             viewBox="0 0 16 16"
+            aria-label="LinkedIn"
             class="fill-primary"
           >
             <path
@@ -54,3 +58,9 @@
     </div>
   </div>
 </section>
+
+<style>
+  .leading-custom {
+    line-height: 3.8rem !important; /* Esto es lo que hace leading-9 */
+  }
+</style>
