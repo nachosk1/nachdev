@@ -1,47 +1,15 @@
 ---
-import { Image } from "astro:assets";
-import { listProjects } from "../../constants";
+import { listProjects as lsProjects } from "../../constants";
 import Container from "./Container.astro";
 import Title from "./Title.astro";
+import ListProject from './ListProject'
 ---
 
 <section class="" id="projects" class="pt-2">
   <div class="-mt-10 md:-mt-28 pt-20">
     <Container>
       <Title bg="bg-background text-black">Proyectos</Title>
-      <div class="pt-2 grid md:grid-cols-2 gap-6">
-        {
-          listProjects.map((project) => (
-            <div class="shadow-lg inline-flex flex-col rounded">
-              <div class="mt-4 overflow-hidden relative">
-                <Image
-                  src={project.image}
-                  alt={`imagen ${project.title}`}
-                  width={300}
-                  height={300}
-                  class="rounded-t hover:scale-105 transition duration-300 ease-in-out transform w-full h-[300px] object-cover"
-                />
-                <div class="absolute top-4 left-4">
-                  <span class="bg-black/25 backdrop-blur-sm rounded-full px-4 py-1 text-white">
-                    {project.type}
-                  </span>
-                </div>
-              </div>
-              <div class="p-4">
-                <h3 class="font-bold">{project.title}</h3>
-                <p class="mt-2 text-gray-700">{project.description}</p>
-                <div class="mt-4 flex gap-2 flex-wrap">
-                  {project.skills.map((skill) => (
-                    <span class="bg-primary text-white rounded-full px-2 py-1">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))
-        }
-      </div>
+      <ListProject listProjects={lsProjects} client:load/>
     </Container>
   </div>
 </section>
