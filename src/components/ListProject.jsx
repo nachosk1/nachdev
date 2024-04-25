@@ -23,16 +23,29 @@ export default function ListProyect({ listProjects }) {
         }}
       >
         {listProjects.map(
-          ({ id, title, description, skills, github, image, skilss, type }) => (
-            <SwiperSlide className="h-[40vh] md:h-[65vh]" key={id}>
-              <div className="shadow-lg rounded">
+          ({
+            id,
+            title,
+            url,
+            description,
+            skills,
+            github,
+            image,
+            skilss,
+            type,
+          }) => (
+            <SwiperSlide
+              className="h-[40vh] md:h-[65vh] shadow hover:shadow-lg"
+              key={id}
+            >
+              <a href={url} className="rounded group">
                 <div className="mt-4 overflow-hidden relative">
                   <img
                     src={image}
                     alt={`imagen ${title}`}
                     width={300}
                     height={300}
-                    className="rounded-t hover:scale-105 transition duration-300 ease-in-out transform w-full h-[300px] object-cover"
+                    className="rounded-t group-hover:scale-105 transition duration-300 ease-in-out transform w-full h-[300px] object-cover"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-black/25 backdrop-blur-sm rounded-full px-4 py-1 text-white">
@@ -42,7 +55,9 @@ export default function ListProyect({ listProjects }) {
                 </div>
                 <div className="p-4 border">
                   <h3 className="font-bold">{title}</h3>
-                  <p className="mt-2 text-gray-700 line-clamp-5">{description}</p>
+                  <p className="mt-2 text-gray-700 line-clamp-5">
+                    {description}
+                  </p>
                   <div className="mt-4 flex gap-2 flex-wrap">
                     {skills.map((skill) => (
                       <span
@@ -54,7 +69,7 @@ export default function ListProyect({ listProjects }) {
                     ))}
                   </div>
                 </div>
-              </div>
+              </a>
             </SwiperSlide>
           )
         )}

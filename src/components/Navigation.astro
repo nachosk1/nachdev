@@ -1,11 +1,12 @@
 ---
 import { optionNav } from "../../constants/index.js";
-import Switch from "../components/Switch.astro"
+import Switch from "../components/Switch.astro";
+import Container from "./Container.astro";
 import Logo from "./Logo.astro";
 ---
 
 <header class="fixed w-full bg-background shadow-sm z-30">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+  <Container>
     <div class="flex h-16 items-center justify-between">
       <div class="md:flex md:items-center md:gap-12">
         <Logo />
@@ -54,6 +55,5 @@ import Logo from "./Logo.astro";
         </button>
       </div>
     </div>
-  </div>
+  </Container>
 </header>
-
