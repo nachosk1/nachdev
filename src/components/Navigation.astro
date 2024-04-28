@@ -5,9 +5,7 @@ import Container from "./Container.astro";
 import Logo from "./Logo.astro";
 
 const currentPath = Astro.url.pathname;
-
-console.log(currentPath);
---- 
+---
 
 <header class="fixed w-full bg-background shadow-sm z-30">
   <Container>
@@ -24,7 +22,7 @@ console.log(currentPath);
                 <li>
                   <a
                     class="text-gray-700 transition duration-300 ease-in-out font-semibold hover:text-gray-950 text-base"
-                    href={currentPath == '/' ? option.path : `/${option.path}`}
+                    href={currentPath == "/" ? option.path : `/${option.path}`}
                   >
                     {option.name}
                   </a>

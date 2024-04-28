@@ -1,0 +1,42 @@
+---
+import { listProjects } from "../../constants";
+---
+
+<section class="mt-8">
+  <h2 class="text-2xl font-bold">Otros proyectos</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {
+      listProjects
+        .slice(0, 3)
+        .map(({ url, title, image, type, description, skills }) => (
+          <a href={url} class="rounded group">
+            <div class="mt-4 overflow-hidden relative">
+              <img
+                src={image}
+                alt={`imagen ${title}`}
+                width={300}
+                height={300}
+                class="rounded-t group-hover:scale-105 transition duration-300 ease-in-out transform w-full h-[300px] object-cover"
+              />
+              <div class="absolute top-4 left-4">
+                <span class="bg-black/25 backdrop-blur-sm rounded-full px-4 py-1 text-white">
+                  {type}
+                </span>
+              </div>
+            </div>
+            <div class="p-4 border">
+              <h3 class="font-bold">{title}</h3>
+              <p class="mt-2 text-gray-700 line-clamp-5">{description}</p>
+              <div class="mt-4 flex gap-2 flex-wrap">
+                {skills.map((skill) => (
+                  <span class="bg-primary text-white rounded-full px-2 py-1">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))
+    }
+  </div>
+</section>
