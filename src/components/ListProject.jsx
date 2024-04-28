@@ -61,7 +61,7 @@ export default function ListProyect({ listProjects }) {
                   <div className="mt-4 flex gap-2 flex-wrap">
                     {skills.map((skill) => (
                       <span
-                        className="bg-primary text-white rounded-full px-2 py-1"
+                        className="bg-secondary text-white rounded-full px-2 py-1"
                         key={skill}
                       >
                         {skill}
