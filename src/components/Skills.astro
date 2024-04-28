@@ -7,13 +7,13 @@ import Php from "./icons/Php.astro";
 import Mongodb from "./icons/Mongodb.astro";
 import Mysql from "./icons/Mysql.astro";
 import Vscode from "./icons/Vscode.astro";
-import Figma from "./icons/Figma.astro";
 import React from "./icons/React.astro";
 import Laravel from "./icons/Laravel.astro";
 import Nextjs from "./icons/Nextjs.astro";
 import Remix from "./icons/Remix.astro";
 import Title from "./Title.astro";
 import { Image } from "astro:assets";
+import ItemMessage from "./ItemMessage.astro";
 ---
 
 <section class="-mt-4 pt-20 pb-16" id="skills">
@@ -22,37 +22,47 @@ import { Image } from "astro:assets";
     <div
       class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-8 mt-8"
     >
-      <div class="group bg-white p-4 rounded-full">
+      <div class="relative group bg-white p-4 rounded-full">
         <Html />
+        <ItemMessage title="HTML" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <JavaScript />
+        <ItemMessage title="JavaScript" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Css />
+        <ItemMessage title="CSS" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Php />
+        <ItemMessage title="PHP" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Mongodb />
+        <ItemMessage title="MongoDB" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Mysql />
+        <ItemMessage title="Mysql" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Vscode />
+        <ItemMessage title="VsCode" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <React />
+        <ItemMessage title="React" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Laravel />
+        <ItemMessage title="Laravel" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Nextjs />
+        <ItemMessage title="Nextjs" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Image
           src={"/src/astro.svg"}
           alt="imagen astro"
@@ -60,9 +70,11 @@ import { Image } from "astro:assets";
           width={69}
           height={69}
         />
+        <ItemMessage title="Astro" />
       </div>
-      <div class="group bg-white p-4 rounded-full">
+      <div class="group bg-white p-4 rounded-full relative">
         <Remix />
+        <ItemMessage title="Remix" />
       </div>
     </div>
   </Container>

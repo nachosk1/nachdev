@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<div
+  class="bg-gray-700 w-5 h-5 md:-top-4 rotate-45 hidden group-hover:block absolute transform -translate-x-1/2 left-1/2"
+>
+</div>
+<div
+  class="absolute z-10 max-w-24 px-4 h-8 bg-gray-700 text-white text-sm hidden items-center justify-center rounded-md shadow-lg transform -translate-x-1/2 -translate-y-full group-hover:flex top-0 left-1/2"
+>
+  {title}
+</div>
