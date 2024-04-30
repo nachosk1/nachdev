@@ -16,7 +16,7 @@ import { listProjects } from "../../constants";
                 alt={`imagen ${title}`}
                 width={300}
                 height={300}
-                class="rounded-t group-hover:scale-105 transition duration-300 ease-in-out transform w-full h-[300px] object-cover"
+                class="rounded-t group-hover:scale-105 transition duration-300 ease-in-out transform w-full h-[250px] md:h-[300px] object-cover"
               />
               <div class="absolute top-4 left-4">
                 <span class="bg-black/25 backdrop-blur-sm rounded-full px-4 py-1 text-white">
@@ -24,7 +24,7 @@ import { listProjects } from "../../constants";
                 </span>
               </div>
             </div>
-            <div class="p-4 border dark:border-none dark:bg-white">
+            <div class="p-4 border dark:border-none dark:bg-slate-200">
               <h3 class="font-bold">{title}</h3>
               <p class="mt-2 text-gray-900 line-clamp-5">{description}</p>
               <div class="mt-4 flex gap-2 flex-wrap">

@@ -17,7 +17,7 @@ import Title from "./Title.astro";
           name="name"
           id="name"
           placeholder="Tu nombre"
-          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md dark:bg-white"
+          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md dark:bg-slate-200"
         />
         <label for="email" class="hidden">Tu Correo electrónico</label>
         <input
@@ -25,16 +25,16 @@ import Title from "./Title.astro";
           name="email"
           id="email"
           placeholder="Tu correo electrónico"
-          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md dark:bg-white"
+          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md dark:bg-slate-200"
         />
       </div>
       <textarea
         name="message"
         placeholder="Tu mensaje"
-        class="resize-none p-4 outline-none border-b border-b-slate-600 h-[100px] md:h-[250px] bg-transparent w-full placeholder:text-[#757879] border border-gray-200 rounded-t-md focus:outline-none dark:bg-white"
+        class="resize-none p-4 outline-none border-b border-b-slate-600 h-[100px] md:h-[250px] bg-transparent w-full placeholder:text-[#757879] border border-gray-200 rounded-t-md focus:outline-none dark:bg-slate-200"
       ></textarea>
 
-      <button class={`button transition duration-500 bg-transparent dark:bg-dark-secondary border-2 border-black`}>
+      <button class={`button transition duration-500 bg-transparent dark:bg-dark-secondary border-2 border-black before:bg-third dark:before:bg-dark-background dark:text-white text-black hover:text-white dark:hover:text-black`}>
         Enviar Mensaje</button
       >
     </form>
@@ -66,7 +66,6 @@ import Title from "./Title.astro";
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #1D3557;
     transition: 0.5s ease;
     display: block;
     z-index: -1;
@@ -77,7 +76,6 @@ import Title from "./Title.astro";
   }
 
   .button:hover {
-    color: #fff;
     border: 2px solid #457B9D;
   }
 </style>
