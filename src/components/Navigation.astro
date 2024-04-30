@@ -1,13 +1,13 @@
 ---
 import { optionNav } from "../../constants/index.js";
-import Switch from "../components/Switch.astro";
+import Switch from "./Switch.svelte";
 import Container from "./Container.astro";
 import Logo from "./Logo.astro";
 
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="fixed w-full bg-background shadow-sm z-30">
+<header class="fixed w-full bg-background dark:bg-dark-secondary dark:border-b dark:border-dark-third/40 shadow-sm z-30">
   <Container>
     <div class="flex h-16 items-center justify-between">
       <div class="md:flex md:items-center md:gap-12">
@@ -21,7 +21,7 @@ const currentPath = Astro.url.pathname;
               optionNav.map((option) => (
                 <li>
                   <a
-                    class="text-gray-700 transition duration-300 ease-in-out font-semibold hover:text-gray-950 text-base"
+                    class="text-gray-700 transition font-semibold hover:text-gray-950 text-base dark:text-dark-primary"
                     href={currentPath == "/" ? option.path : `/${option.path}`}
                   >
                     {option.name}
@@ -34,7 +34,7 @@ const currentPath = Astro.url.pathname;
       </div>
 
       <div class="flex items-center gap-4">
-        <Switch />
+        <Switch client:only/>
       </div>
 
       <div class="block md:hidden">

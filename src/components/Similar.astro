@@ -3,7 +3,7 @@ import { listProjects } from "../../constants";
 ---
 
 <section class="mt-8">
-  <h2 class="text-2xl font-bold">Otros proyectos</h2>
+  <h2 class="text-2xl font-bold dark:text-white">Otros proyectos</h2>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
     {
       listProjects
@@ -24,9 +24,9 @@ import { listProjects } from "../../constants";
                 </span>
               </div>
             </div>
-            <div class="p-4 border">
+            <div class="p-4 border dark:border-none dark:bg-white">
               <h3 class="font-bold">{title}</h3>
-              <p class="mt-2 text-gray-700 line-clamp-5">{description}</p>
+              <p class="mt-2 text-gray-900 line-clamp-5">{description}</p>
               <div class="mt-4 flex gap-2 flex-wrap">
                 {skills.map((skill) => (
                   <span class="bg-secondary text-white rounded-full px-2 py-1">

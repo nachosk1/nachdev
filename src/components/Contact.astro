@@ -4,12 +4,12 @@ import Title from "./Title.astro";
 
 <section class="-mt-4 pt-20 px-4"  id="contact">
   <div class="mx-auto max-w-3xl">
-    <Title bg="bg-background text-black">Contacto</Title>
-    <p class="text-lg md:text-xl text-center mb-12 mt-4 text-balance">
+    <Title bg="bg-background text-black dark:bg-primary dark:text-white">Contacto</Title>
+    <p class="text-lg md:text-xl text-center mt-4 text-balance dark:text-white">
       Si buscas fortalecer tu equipo, ¡estaré encantado de colaborar contigo!
       Escríbeme.{" "}
     </p>
-    <form class="my-8 flex flex-col gap-y-4 mx-auto">
+    <form class="py-8 flex flex-col gap-y-4 mx-auto">
       <div class="flex flex-col md:flex-row gap-4">
         <label for="name" class="hidden">Tu nombre</label>
         <input
@@ -17,7 +17,7 @@ import Title from "./Title.astro";
           name="name"
           id="name"
           placeholder="Tu nombre"
-          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md"
+          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md dark:bg-white"
         />
         <label for="email" class="hidden">Tu Correo electrónico</label>
         <input
@@ -25,16 +25,16 @@ import Title from "./Title.astro";
           name="email"
           id="email"
           placeholder="Tu correo electrónico"
-          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md"
+          class="outline-none border-b border-b-slate-600 h-[60px] bg-transparent w-full p-4 placeholder:text-[#757879] border border-gray-200 rounded-t-md dark:bg-white"
         />
       </div>
       <textarea
         name="message"
         placeholder="Tu mensaje"
-        class="resize-none p-4 outline-none border-b border-b-slate-600 h-[100px] md:h-[250px] bg-transparent w-full placeholder:text-[#757879] border border-gray-200 rounded-t-md focus:outline-none"
+        class="resize-none p-4 outline-none border-b border-b-slate-600 h-[100px] md:h-[250px] bg-transparent w-full placeholder:text-[#757879] border border-gray-200 rounded-t-md focus:outline-none dark:bg-white"
       ></textarea>
 
-      <button class={`button transition duration-500 bg-black`}>
+      <button class={`button transition duration-500 bg-transparent dark:bg-dark-secondary border-2 border-black`}>
         Enviar Mensaje</button
       >
     </form>
@@ -44,10 +44,8 @@ import Title from "./Title.astro";
 <style>
   .button {
     padding: 0.8em 1.8em;
-    border: 2px solid #000000;
     position: relative;
     overflow: hidden;
-    background-color: transparent;
     text-align: center;
     text-transform: uppercase;
     font-size: 16px;
@@ -55,7 +53,6 @@ import Title from "./Title.astro";
     z-index: 1;
     font-family: inherit;
     font-weight: 600;
-    color: #000000;
   }
 
   .transform-button {
@@ -81,6 +78,6 @@ import Title from "./Title.astro";
 
   .button:hover {
     color: #fff;
-    border: 2px solid #1D3557;
+    border: 2px solid #457B9D;
   }
 </style>

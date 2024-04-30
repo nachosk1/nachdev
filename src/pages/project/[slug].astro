@@ -30,11 +30,9 @@ if (slug) {
   title="NachDev - Pedro Martinez"
   description="Portafolio Pedro Martinez- Analista Programador y Ingenieria en informática. Página sobre mí y experiencia como profesional."
 >
-  <main class="pt-20 pb-10">
+  <main class="pt-20 pb-10 bg-background dark:bg-primary">
     <Container>
-      <div class="mt-2">
-        <Left />
-      </div>
+      <Left />
 
       <div class="overflow-hidden rounded-t h-[28rem] mt-4">
         <Image
@@ -45,14 +43,16 @@ if (slug) {
           height={500}
         />
       </div>
-      <section class="mt-4 grid md:grid-cols-2 gap-8">
+      <section class="mt-4 grid md:grid-cols-2 gap-8 text-gray-700 dark:text-white">
         <div>
-          <h2 class="text-2xl mt-4 md:text-4xl font-bold text-gray-700">{project.title}</h2>
+          <h2 class="text-2xl mt-2 md:text-4xl font-bold">
+            {project.title}
+          </h2>
           <div class="mt-4 sm:text-lg/relaxed">
             {project.description}
           </div>
         </div>
-        <Direction project={project}/>
+        <Direction project={project} />
       </section>
       <Similar />
     </Container>

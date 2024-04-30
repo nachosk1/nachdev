@@ -7,12 +7,11 @@ import { Navigation } from "swiper/modules";
 
 export default function ListProyect({ listProjects }) {
   return (
-    <div>
+    <div className="mt-8">
       <Swiper
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper"
         breakpoints={{
           320: {
             slidesPerView: 1,
@@ -35,11 +34,11 @@ export default function ListProyect({ listProjects }) {
             type,
           }) => (
             <SwiperSlide
-              className="h-[40vh] md:h-[65vh] shadow hover:shadow-lg"
+              className="h-[40vh] md:h-[65vh] shadow hover:shadow-lg dark:bg-dark-primary dark:text-black rounded"
               key={id}
             >
-              <a href={url} className="rounded group">
-                <div className="mt-4 overflow-hidden relative">
+              <a href={url} className="group">
+                <div className="relative overflow-hidden">
                   <img
                     src={image}
                     alt={`imagen ${title}`}
@@ -53,15 +52,15 @@ export default function ListProyect({ listProjects }) {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 border">
-                  <h3 className="font-bold">{title}</h3>
-                  <p className="mt-2 text-gray-700 line-clamp-5">
+                <div className="p-4 border dark:border-none">
+                  <h3 className="font-bold ">{title}</h3>
+                  <p className="mt-2 text-gray-900 line-clamp-5">
                     {description}
                   </p>
                   <div className="mt-4 flex gap-2 flex-wrap">
                     {skills.map((skill) => (
                       <span
-                        className="bg-secondary text-white rounded-full px-2 py-1"
+                        className="bg-secondary text-white rounded-full px-2 py-1 dark:bg-dark-third"
                         key={skill}
                       >
                         {skill}

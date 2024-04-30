@@ -1,15 +1,15 @@
 ---
-const { bg = "bg-secondary text-white" } = Astro.props;
+const { bg  } = Astro.props;
 ---
 
 <span class="relative flex justify-center">
   <div
-    class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-gray-900 to-transparent opacity-75"
+    class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-gray-900 dark:via-dark-third to-transparent opacity-75"
   >
   </div>
 
   <h2
-    class=`relative px-6 z-10  ${bg} text-2xl md:text-4xl font-bold  pr-6`
+    class=`relative px-6 z-10 ${bg} text-2xl md:text-4xl font-bold pr-6`
   >
     <slot />
   </h2>
