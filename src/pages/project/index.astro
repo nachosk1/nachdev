@@ -1,0 +1,77 @@
+---
+import Container from "../../components/Container.astro";
+import Layout from "../../layouts/Layout.astro";
+import ItemOne from "../../components/parallax/ItemOne.astro";
+import ItemTwo from "../../components/parallax/ItemTwo.astro";
+import ItemThree from "../../components/parallax/ItemThree.astro";
+import ItemFour from "../../components/parallax/ItemFour.astro";
+import ItemFive from "../../components/parallax/ItemFive.astro";
+import ItemSix from "../../components/parallax/ItemSix.astro";
+import Title from "../../components/Title.astro";
+import { listProjects } from "../../../constants";
+---
+
+<Layout
+  title="Proyectos"
+  description="Proyectos de desarrollo web y diseño gráfico realizados por el equipo de DsCode."
+>
+  <main class="pt-14 pb-10 bg-background dark:bg-primary">
+    <div class="w-full h-[35vh] md:h-[70vh] relative bg-black">
+      <ItemOne />
+      <ItemTwo />
+      <ItemThree />
+      <ItemFour />
+      <ItemFive />
+      <ItemSix />
+    </div>
+    <Container>
+      <div class="md:mt-4">
+        <Title bg="bg-background dark:bg-primary dark:text-white">Proyectos</Title>
+        <p class="mt-4 sm:text-xl/relaxed transition text-center dark:text-white">
+          Descubre los proyectos de desarrollo web, cada uno diseñado por cumplir con objetivos específicos y mejorar la experiencia del usuario.
+        </p>
+        <section class="grid md:grid-cols-2 gap-8 mt-4">
+          {
+            listProjects.map((proj) => (
+            <div
+              class=" shadow hover:shadow-lg dark:bg-slate-200 dark:text-black rounded"
+            >
+              <a href={proj.url} class="group">
+                <div class="relative overflow-hidden">
+                  <img
+                    src={proj.image}
+                    alt={`imagen ${proj.title}`}
+                    width={300}
+                    height={300}
+                    class="rounded-t group-hover:scale-105 transition duration-300 ease-in-out transform w-full h-[300px] object-cover"
+                  />
+                  <div class="absolute top-4 left-4">
+                    <span class="bg-black/25 backdrop-blur-sm rounded-full px-4 py-1 text-white">
+                      {proj.type}
+                    </span>
+                  </div>
+                </div>
+                <div class="p-4 border dark:border-none">
+                  <h3 class="font-bold ">{proj.title}</h3>
+                  <p class="mt-2 text-gray-900 line-clamp-5">
+                    {proj.description}
+                  </p>
+                  <div class="mt-4 flex gap-2 flex-wrap">
+                    {proj.skills.map((skill) => (
+                      <span
+                        class="bg-secondary text-white rounded-full px-2 py-1 dark:bg-dark-third"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            </div>
+            ))
+          }
+        </section>
+      </div>
+    </Container>
+  </main>
+</Layout>
