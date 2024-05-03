@@ -22,17 +22,7 @@ export default function ListProyect({ listProjects }) {
         }}
       >
         {listProjects.map(
-          ({
-            id,
-            title,
-            url,
-            description,
-            skills,
-            github,
-            image,
-            skilss,
-            type,
-          }) => (
+          ({ id, title, url, description, skills, image, type }) => (
             <SwiperSlide
               className="h-[40vh] md:h-[65vh] shadow hover:shadow-lg dark:bg-slate-200 dark:text-black rounded"
               key={id}
