@@ -22,10 +22,8 @@ export default function Parallax() {
   const calculateOffset = (factor) => `${scrollY * factor}px`;
 
   return (
-    <div className="w-full h-[35vh] md:h-[70vh] relative bg-black overflow-hidden">
-      <div className="absolute z-[1] top-0 w-full">
-        <div className="max-w-[1060px] mx-auto bg-green-200 dark:bg-sky-200 h-[35vh] md:h-[70vh] "></div>
-      </div>
+    <div className="w-full h-[25vh] md:h-[57vh] relative bg-black overflow-hidden">
+      
       <ItemOne offset={calculateOffset(0.2)} />
       <ItemTwo offset={calculateOffset(0.3)} />
       <ItemThree offset={calculateOffset(0.4)} />
