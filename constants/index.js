@@ -58,4 +58,16 @@ export const listProjects = [
     skills: ["Astro", "Tailwind", "TypeScript"],
     type: "Frontend"
   },
+  {
+    id: 4,
+    title: "Casa Finder",
+    url: "/project/casa-finder",
+    description:
+      "Página web innovadora especializada en el arriendo y venta de propiedades vanguardistas. Esta plataforma permite a los usuarios filtrar las propiedades por ubicación, rango de precio y tipo de propiedad, facilitando la búsqueda de la casa ideal. Con una amplia gama de propiedades listadas y una interfaz de usuario intuitiva, nuestra página web se esfuerza por hacer que la búsqueda de una casa sea una experiencia agradable y eficiente.",
+    link: "http://casa-finder.nachdev.com",
+    github: "https://github.com/nachosk1/Property-Prime1",
+    image: "/src/casa-finder.webp",
+    skills: ["Vite", "React", "useContext"],
+    type: "Frontend"
+  },
 ];
