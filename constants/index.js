@@ -55,7 +55,7 @@ export const listProjects = [
     link: "http://spacex-astro.nachdev.com",
     github: "https://github.com/nachosk1/spacex-launches",
     image: "/src/spacex-astro.webp",
-    skills: ["Astro", "Tailwind", "TypeScript"],
+    skills: ["Astro", "Tailwind", "TypeScript", "Tailwind"],
     type: "Frontend"
   },
   {
@@ -67,7 +67,19 @@ export const listProjects = [
     link: "http://casa-finder.nachdev.com",
     github: "https://github.com/nachosk1/Property-Prime1",
     image: "/src/casa-finder.webp",
-    skills: ["Vite", "React", "useContext"],
+    skills: ["Vite", "React", "useContext", "Tailwind"],
+    type: "Frontend"
+  },
+  {
+    id: 5,
+    title: "GuitarLA",
+    url: "/project/guitarla",
+    description:
+      "Página web de venta de guitarras, la cual permite a los usuarios añadir al carrito de compra de las guitarras que deseen adquirir. Además, calcula el total de la compra de manera automática, guardando la información en el LocalStorage para que no se pierda al recargar la página.",
+    link: "http://guitar-ts.nachdev.com",
+    github: "https://github.com/nachosk1/guitar-ts",
+    image: "/src/guitar-ts.webp",
+    skills: ["Vite", "React", "TypeScript", "LocalStorage", "CSS"],
     type: "Frontend"
   },
 ];

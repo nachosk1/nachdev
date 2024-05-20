@@ -1,12 +1,14 @@
 ---
 import { listProjects } from "../../constants";
+const url = Astro.url;
+const filterProSimilar = listProjects.filter((project) => project.url !== url.pathname);
 ---
 
 <section class="mt-8">
   <h2 class="text-2xl font-bold dark:text-white">Otros proyectos</h2>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
     {
-      listProjects
+      filterProSimilar
         .slice(0, 3)
         .map(({ url, title, image, type, description, skills }) => (
           <a href={url} class="rounded group">
